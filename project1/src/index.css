@@ -1,0 +1,494 @@
+@font-face {
+  font-family: "OTEnjoystoriesBA";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #5b2386;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  header {
+    margin-top: 65px;
+    width: 267px;
+    height: 126px;
+  }
+  header h1 {
+    visibility: hidden;
+    height: 0px;
+  }
+  header img {
+    width: 100%;
+    height: 100%;
+    background: url(./img/Frame\ 12.svg) no-repeat 50% 50% / contain;
+  }
+  section {
+    margin: 31px 0 83px 0;
+  }
+  section h2 {
+    font-weight: 700;
+    font-family: "OTEnjoystoriesBA";
+    font-size: 22px;
+    line-height: 24.2px;
+    text-align: center;
+    color: #f5df4d;
+  }
+  section .descrition-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 62px 0 66px 0;
+  }
+  section .descrition-container img {
+    width: 30px;
+    height: 30px;
+    padding-top: 13px;
+    margin-top: 5px;
+  }
+  section .descrition-container .descrition {
+    font-family: "GmarketSansMedium";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: center;
+    color: #ffffff;
+  }
+  section .descrition span {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  section [class|="input"] {
+    font-family: "GmarketSansMedium";
+    height: 37px;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+  }
+  section [class|="input"] input {
+    font-family: "GmarketSansMedium";
+    font-size: 14px;
+    line-height: 35px;
+    width: 156px;
+    border-radius: 7px;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    border-width: 0;
+    margin: 0 4px;
+  }
+  section [class|="input"] span {
+    display: block;
+    margin: 17px 0;
+  }
+  section [class|="input"] input:focus {
+    outline: none;
+  }
+  section [class|="input"] input::placeholder {
+    font-family: "GmarketSansMedium";
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 400;
+    color: #babcbe;
+  }
+  section .input-time {
+    height: 100%;
+  }
+  section .button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: url(./img/Frame\ 11.svg) no-repeat bottom right / contain;
+    margin: 49px 0 64px 0;
+  }
+  section .button-output {
+    font-family: "GmarketSansMedium";
+    font-size: 14px;
+    line-height: 1.2;
+    align-items: center;
+    font-weight: 700;
+    background-color: #fcee21;
+    border-radius: 13px;
+    padding: 21px 38px 18px 38px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    color: #5b2386;
+  }
+  section .button-output span {
+    display: block;
+  }
+  section [class|="output"] {
+    font-family: "GmarketSansMedium";
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    vertical-align: text-bottom;
+  }
+  section [class|="output"] span {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+  }
+  section .output-field {
+    margin-bottom: 15px;
+  }
+  section .output-time {
+    margin-bottom: 55px;
+  }
+  section .button-container2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  section .button-container2 button {
+    font-family: "GmarketSansMedium";
+    font-size: 14px;
+    line-height: 1;
+    align-items: center;
+    font-weight: 700;
+    background-color: #fcee21;
+    border-radius: 56px;
+    padding: 18px 18px 15px 18px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    color: #5b2386;
+  }
+  section .button-container2 button:last-child {
+    background-color: #ffffff;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  footer img {
+    width: 91px;
+    height: 18px;
+    margin-bottom: 17px;
+  }
+  footer p {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 13.03px;
+    text-align: center;
+    color: #fff;
+  }
+  hr {
+    width: 100%;
+    height: 1px;
+  }
+  article {
+    margin: 200px 0;
+    width: 330px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 0px #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  }
+  article h2 {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  article p {
+    font-family: "OTEnjoystoriesBA";
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 70.4px;
+    text-align: center;
+    color: #5b2386;
+  }
+  article p span {
+    display: none;
+  }
+  article .p2 {
+    font-size: 36px;
+    line-height: 39.6px;
+  }
+  article img {
+    width: 241px;
+    height: 188px;
+    padding: 4px 1.04px 0px 2px;
+    margin: 15px 0 34px 0;
+  }
+
+  article button {
+    font-family: "GmarketSansMedium";
+    font-size: 14px;
+    line-height: 1.2;
+    align-items: center;
+    font-weight: 700;
+    background-color: #fcee21;
+    border-radius: 13px;
+    padding: 21px 49px 18px 49px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    color: #5b2386;
+    text-align: center;
+  }
+  article button span {
+    display: block;
+  }
+}
+
+@media (min-width: 600px) {
+  header {
+    margin-top: 120px;
+    width: 564px;
+    height: 265px;
+  }
+  header h1 {
+    visibility: hidden;
+    height: 0px;
+  }
+  header img {
+    width: 100%;
+    height: 100%;
+    background: url(./img/Frame\ 12.svg) no-repeat 50% 50% / contain;
+  }
+  section {
+    margin: 46px 0 130px 0;
+  }
+  section h2 {
+    font-weight: 700;
+    font-family: "OTEnjoystoriesBA";
+    font-size: 36px;
+    line-height: 39.6px;
+    text-align: center;
+    color: #f5df4d;
+  }
+  section .descrition-container {
+    display: flex;
+    flex-direction: row;
+    height: 109px;
+    justify-content: center;
+    margin: 78px 0 102px 0;
+  }
+  section .descrition-container img {
+    width: 46px;
+    height: 46px;
+    padding-top: 13px;
+  }
+  section .descrition-container .descrition {
+    font-family: "GmarketSansMedium";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 14px;
+  }
+  section .descrition span {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  section [class|="input"] {
+    font-family: "GmarketSansMedium";
+    height: 57px;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 27px;
+  }
+  section [class|="input"] input {
+    font-family: "GmarketSansMedium";
+    font-size: 24px;
+    line-height: 57px;
+    width: 228px;
+    border-radius: 7px;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    border-width: 0;
+    margin: 0 17px;
+  }
+  section [class|="input"] input:focus {
+    outline: none;
+  }
+  section [class|="input"] input::placeholder {
+    font-family: "GmarketSansMedium";
+    font-size: 24px;
+    line-height: 57px;
+    font-weight: 400;
+    color: #babcbe;
+  }
+  section .input-time {
+    margin-bottom: 115px;
+  }
+  section .button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: url(./img/Frame\ 11.svg) no-repeat bottom right / contain;
+    margin-bottom: 147px;
+  }
+  section .button-output {
+    font-family: "GmarketSansMedium";
+    font-size: 24px;
+    line-height: 1;
+    align-items: center;
+    font-weight: 700;
+    background-color: #fcee21;
+    border-radius: 56px;
+    padding: 21px 49px 18px 49px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    color: #5b2386;
+  }
+  section [class|="output"] {
+    font-family: "GmarketSansMedium";
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+    vertical-align: text-bottom;
+  }
+  section [class|="output"] span {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.2;
+    text-align: center;
+  }
+  section .output-field {
+    margin-bottom: 17px;
+  }
+  section .output-time {
+    margin-bottom: 127px;
+  }
+  section .button-container2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  section .button-container2 button {
+    font-family: "GmarketSansMedium";
+    font-size: 24px;
+    line-height: 1;
+    align-items: center;
+    font-weight: 700;
+    background-color: #fcee21;
+    border-radius: 56px;
+    padding: 21px 49px 18px 49px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    color: #5b2386;
+    /* // On click
+      // Open overlay: "화이팅";
+      // Animate: Instant;
+      animation-duration: 0ms; */
+  }
+  section .button-container2 button:last-child {
+    background-color: #ffffff;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  footer img {
+    width: 125px;
+    height: 25px;
+    margin-bottom: 20px;
+  }
+  footer p {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17.38px;
+    text-align: center;
+    color: #fff;
+  }
+  hr {
+    width: 100%;
+    height: 1px;
+  }
+  article {
+    margin: 200px 0;
+    width: 800px;
+    height: 800px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 0px #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 76px 0 68px 0;
+  }
+  article h2 {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  article p {
+    font-family: "OTEnjoystoriesBA";
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 105.6px;
+    text-align: center;
+    color: #5b2386;
+    margin-bottom: 4px;
+  }
+  article .p2 {
+    font-size: 36px;
+    line-height: 39.6px;
+  }
+  article img {
+    width: 433px;
+    height: 337px;
+    padding: 4px 1.04px 0px 2px;
+    margin: 29px 0 74px 0;
+  }
+
+  article button {
+    font-family: "GmarketSansMedium";
+    font-size: 24px;
+    line-height: 1;
+    align-items: center;
+    font-weight: 700;
+    background-color: #fcee21;
+    border-radius: 56px;
+    padding: 21px 49px 18px 49px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    color: #5b2386;
+    text-align: center;
+  }
+}
