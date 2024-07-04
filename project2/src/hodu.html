@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hodu</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./hodu.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="sr-only">고양이 "hodu"의 웹사이트</h1>
+      <nav class="navbar">
+        <a href="#"><img src="./img/logo.svg" alt="HODU" /></a>
+        <ul class="nav-links">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Support</a></li>
+          <li><button type="button" class="download-btn">Download</button></li>
+        </ul>
+        <button class="mobile" id="openMobileMenuBtn" type="button">
+          <img src="./img/menu.svg" alt="" />
+        </button>
+      </nav>
+    </header>
+    <section class="hodu">
+      <div class="hodu-text">
+        <h2>
+          <span class="pc-span">Lorem Ipsum is simply </span><span class="mobile-span">dummy text</span> of the printing
+          and
+        </h2>
+        <p>
+          <span class="pc-span">
+            <span class="mobile-span">Lorem Ipsum is simply dummy text</span> of the printing and</span
+          >
+          <span class="pc-span">typesetting industry.</span>
+          <span class="pc-span">
+            <span class="mobile-span">Lorem Ipsum has been the industry's</span> standard dummy text</span
+          >
+          <span class="pc-span">ever since the 1500s, <span class="mobile-span">when an unknown</span></span>
+        </p>
+        <button type="button" class="download-btn">Download</button>
+      </div>
+      <div class="hodu-img">
+        <img src="./img/box-cat.png" alt="main hodu image" />
+      </div>
+    </section>
+    <main>
+      <section class="section1">
+        <div class="content">
+          <img src="./img/img_4.jpg" alt="hodu img" />
+          <div>
+            <h2>Lorem Ipsum is simply dummy text of the printing and dummy text</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section2">
+        <h2>dummy text of the printing and dummy</h2>
+        <p>Lorem Ipsum is simply <span>dummy text</span> of the printing and typesetting industry.</p>
+        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+        <ul class="images">
+          <li><img src="./img/img_1.jpg" alt="" /></li>
+          <li><img src="./img/img_2.jpg" alt="" /></li>
+          <li><img src="./img/img_3.jpg" alt="" /></li>
+        </ul>
+        <div class="text-btn-wrap">
+          <p><span>Lorem Ipsum is simply dummy text of the</span> printing and typesetting industry.</p>
+          <p>
+            <span>Lorem Ipsum has been the industry's</span> <span>standard dummy text ever since the 1500s,</span> when
+            an unknown
+          </p>
+          <p><span>Ipsum is simply dummy text of the printing</span> and typesetting industry.</p>
+          <button type="button" class="learn-more-btn">Learn More</button>
+        </div>
+      </section>
+      <section class="subscribe">
+        <div class="subscribe-content">
+          <h2>Subscribe to our Blog post</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text
+          </p>
+          <!-- <p>Lorem Ipsum has been the industry's standard dummy text</p> -->
+        </div>
+        <div class="subscribe-form">
+          <!-- alert 으로 메일 유효성 처리-->
+          <img src="./img/mail.svg" alt="" />
+          <input type="email" placeholder="Enter your email address" />
+          <button type="button" class="subscribe-btn" id="openDialogBtn" onclick="showModal()">Subscribe</button>
+        </div>
+      </section>
+      <div class="bottom-img">
+        <img src="./img/img_5.jpg" alt="" />
+      </div>
+      <img id="scrollTopBtn" class="scroll-top-btn" src="./img/top-btn.svg" alt="" />
+    </main>
+    <footer class="footer">
+      <div>
+        <a href="#"><img src="./img/logo.svg" alt="HODU" /></a>
+        <ul>
+          <li>
+            <a href=""><img src="./img/blog.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="./img/instagram.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="./img/facebook.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="./img/youtube.svg" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="mobile">
+        <p>About</p>
+        <p>Blog</p>
+        <p>Support</p>
+        <p>Terms of Use</p>
+      </div>
+    </footer>
+    <section id="mobileMenu">
+      <h2 class="sr-only">모바일 메뉴창</h2>
+      <img id="closeMobileMenuBtn" class="right-arrow" src="./img/arrow-right.svg" alt="" />
+      <ul class="nav-links">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Support</a></li>
+        <li><button type="button" class="download-btn">Download</button></li>
+      </ul>
+    </section>
+    <dialog id="myDialog">
+      <h2 class="sr-only">subscribe modal</h2>
+      <img src="./img/cat-subscribe.png" alt="" />
+      <p>Thank you!</p>
+      <p class="p2">Lorem Ipsum is simply dummy text of the printing industry.</p>
+      <!-- <form action="" method="post" name="mail-submit">
+        <button id="closeDialogBtn" type="submit" name="mail-submit">OK! I LOVE HODU</button>
+      </form> -->
+      <button id="closeDialogBtn" type="submit" name="mail-submit">OK! I LOVE HODU</button>
+    </dialog>
+
+    <script>
+      const dialog = document.getElementById("myDialog");
+      const openDialogBtn = document.getElementById("openDialogBtn");
+      const closeDialogBtn = document.getElementById("closeDialogBtn");
+      const mobileMenu = document.getElementById("myMenu");
+      const openMobileMenuBtn = document.getElementById("openMobileMenuBtn");
+      const closeMobileMenuBtn = document.getElementById("closeMobileMenuBtn");
+
+      openDialogBtn.addEventListener("click", () => {
+        dialog.showModal();
+      });
+      closeDialogBtn.addEventListener("click", () => {
+        dialog.close();
+      });
+      openMobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.showModal();
+      });
+      closeMobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.close();
+      });
+
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          scrollTopBtn.style.display = "block";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+        scrollTopBtn.addEventListener("click", function () {
+          window.scroll({ top: 0, behavior: "smooth" });
+        });
+      }
+
+      const hoverImage = document.getElementById("scrollTopBtn");
+      function changeImageOnHover() {
+        hoverImage.src = "./img/keyboard_arrow_up.svg";
+      }
+      function revertImage() {
+        hoverImage.src = "./img/top-btn.svg";
+      }
+      hoverImage.addEventListener("mouseover", changeImageOnHover);
+      hoverImage.addEventListener("mouseout", revertImage);
+    </script>
+  </body>
+</html>

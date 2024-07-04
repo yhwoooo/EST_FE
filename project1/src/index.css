@@ -1,4 +1,12 @@
-@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format("woff2"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format("woff"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format("opentype");
+}
+
 @font-face {
   font-family: "OTEnjoystoriesBA";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff") format("woff");
@@ -23,6 +31,17 @@ body {
   align-items: center;
   /* overflow: hidden; */
   white-space: nowrap;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap; /* Prevents text from wrapping */
 }
 
 @media (max-width: 600px) {
@@ -163,7 +182,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 13px;
   }
   section .button-container2 button {
     font-family: "GmarketSansMedium";
@@ -201,28 +220,26 @@ body {
     text-align: center;
     color: #fff;
   }
-  hr {
-    width: 100%;
-    height: 1px;
+  dialog:not([open]) {
+    display: none;
   }
-  article {
-    margin: 200px 0;
+  dialog {
+    margin: auto;
     width: 330px;
     height: 500px;
     background-color: #fff;
     border-radius: 30px;
+    border: none;
     box-shadow: 0px 0px 20px 0px #000000;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px 0;
   }
-  article h2 {
-    visibility: hidden;
-    width: 0;
-    height: 0;
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
   }
-  article p {
+  dialog p {
     font-family: "OTEnjoystoriesBA";
     font-weight: 700;
     font-size: 64px;
@@ -230,21 +247,21 @@ body {
     text-align: center;
     color: #5b2386;
   }
-  article p span {
+  dialog p span {
     display: none;
   }
-  article .p2 {
+  dialog .p2 {
     font-size: 36px;
     line-height: 39.6px;
   }
-  article img {
+  dialog img {
     width: 241px;
     height: 188px;
     padding: 4px 1.04px 0px 2px;
     margin: 15px 0 34px 0;
   }
 
-  article button {
+  dialog button {
     font-family: "GmarketSansMedium";
     font-size: 14px;
     line-height: 1.2;
@@ -257,7 +274,7 @@ body {
     color: #5b2386;
     text-align: center;
   }
-  article button span {
+  dialog button span {
     display: block;
   }
 }
@@ -395,7 +412,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 13px;
   }
   section .button-container2 button {
     font-family: "GmarketSansMedium";
@@ -437,28 +454,26 @@ body {
     text-align: center;
     color: #fff;
   }
-  hr {
-    width: 100%;
-    height: 1px;
+  dialog:not([open]) {
+    display: none;
   }
-  article {
-    margin: 200px 0;
+  dialog {
+    margin: auto;
     width: 800px;
     height: 800px;
     background-color: #fff;
     border-radius: 30px;
+    border: none;
     box-shadow: 0px 0px 20px 0px #000000;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 76px 0 68px 0;
   }
-  article h2 {
-    visibility: hidden;
-    width: 0;
-    height: 0;
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
   }
-  article p {
+  dialog p {
     font-family: "OTEnjoystoriesBA";
     font-weight: 700;
     font-size: 96px;
@@ -467,18 +482,18 @@ body {
     color: #5b2386;
     margin-bottom: 4px;
   }
-  article .p2 {
+  dialog .p2 {
     font-size: 36px;
     line-height: 39.6px;
   }
-  article img {
+  dialog img {
     width: 433px;
     height: 337px;
     padding: 4px 1.04px 0px 2px;
     margin: 29px 0 74px 0;
   }
 
-  article button {
+  dialog button {
     font-family: "GmarketSansMedium";
     font-size: 24px;
     line-height: 1;

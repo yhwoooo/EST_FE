@@ -1,0 +1,460 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --font: "SpoqaHanSansNeo-Regular";
+  --button-color: #d97652;
+  --button-font-color: #fff;
+  --button-radius: 40px;
+  --button-font-size: 16px;
+  --button-font-weight: 700;
+  --button-line-height: 20.03px;
+  --button-text-align: center;
+  --button-font-size-mobile: 14px;
+  --button-font-weight-mobile: 700;
+  --button-line-height-mobile: 17.53px;
+  --button-text-align-mobile: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+#mobileMenu {
+  display: none;
+}
+button {
+  background-color: var(--button-color);
+  color: var(--button-font-color);
+  border-radius: var(--button-radius);
+  border: none;
+}
+img {
+  width: 80px;
+  height: 80px;
+}
+footer div ul li a img,
+#mobileMenu img {
+  background-color: blue;
+}
+
+#myDialog:not([open]) {
+  display: none;
+}
+@media (max-width: 2100px) {
+  .mobile {
+    display: none;
+  }
+  button {
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    line-height: var(--button-line-height);
+    text-align: var(--button-text-align);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  button:hover {
+    background-color: #c5683d;
+    /* color: #f2e9d8; */
+    color: #fff;
+  }
+  header {
+    width: 100%;
+    height: 102px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f2e9d8;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  header .navbar {
+    width: 100%;
+    padding: 0 14%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .navbar a img {
+    width: 130px;
+    height: 40px;
+  }
+  header .navbar .nav-links {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+  header .navbar .nav-links li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.03px;
+    color: #000000;
+  }
+  header .navbar .nav-links li .download-btn {
+    height: 50px;
+    width: 140px;
+    border-radius: 40px;
+    margin-left: 10px;
+  }
+  .hodu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 798px;
+    background: #f2e9d8;
+    padding: 0 14% 0 14%;
+    overflow: hidden;
+  }
+  .hodu .hodu-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 63%;
+    margin-right: 10%;
+  }
+  .hodu .hodu-text h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60.1px;
+    text-align: left;
+  }
+  .hodu .hodu-text p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.03px;
+    text-align: left;
+    margin: 40px 0;
+  }
+  .pc-span {
+    display: block;
+  }
+  .hodu .hodu-text .download-btn {
+    height: 50px;
+    width: 140px;
+    border-radius: 40px;
+  }
+  .hodu .hodu-img {
+    width: 415px;
+    height: 766px;
+    min-width: 197px;
+    min-height: 422px;
+    margin-top: 106px;
+  }
+  .hodu .hodu-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  main {
+    width: 100%;
+    padding: 0 14% 0 14%;
+    position: relative;
+  }
+  .scroll-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 184px;
+    right: 24px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border-radius: 100%;
+    border: 1px solid #c4c4c4;
+    background-color: #fff;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  #myDialog {
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    border-radius: 30px;
+    border: none;
+    background-image: url(./img/modal-bg-img.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 30px 0px #000000 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #myDialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #myDialog img {
+    width: 110px;
+    height: 112px;
+    margin: 60px 0 24px 0;
+  }
+  #myDialog p {
+    font-weight: 700;
+    height: 46px;
+    font-size: 36px;
+    line-height: 45.07px;
+    text-align: center;
+    color: #d97652;
+    margin-bottom: 12px;
+  }
+  #myDialog .p2 {
+    height: 18px;
+    font-size: 14px;
+    line-height: 17.53px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 38px;
+  }
+  #myDialog button {
+    width: 189px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 20.03px;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 40px;
+    padding: 15px 25px 15px 25px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 1670px) {
+  .hodu .hodu-text h2 {
+    font-size: 40px;
+    line-height: 40.1px;
+  }
+  .hodu .hodu-text p {
+    font-size: 15px;
+    line-height: 20.03px;
+  }
+}
+@media (max-width: 1470px) {
+  .hodu .hodu-text h2 {
+    font-size: 28px;
+    line-height: 35.1px;
+  }
+  .hodu .hodu-text p {
+    font-size: 14px;
+    line-height: 18.03px;
+  }
+}
+@media (max-width: 1145px) {
+  .hodu .hodu-text h2 {
+    font-size: 24px;
+    line-height: 35.1px;
+  }
+  .hodu .hodu-text p {
+    font-size: 12px;
+    line-height: 16.03px;
+  }
+}
+
+@media (max-width: 800px) {
+  header .navbar {
+    width: 100%;
+    padding: 0 5%;
+  }
+  .hodu {
+    padding: 4% 10% 0 10%;
+  }
+}
+@media (max-width: 650px) {
+  button {
+    font-size: var(--button-font-size-mobile);
+    font-weight: var(--button-font-weight-mobile);
+    line-height: var(--button-line-height-mobile);
+    text-align: var(--button-text-align-mobile);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  button:hover {
+    background-color: #c5683d;
+    /* color: #f2e9d8; */
+    color: #fff;
+  }
+  #openMobileMenuBtn {
+    width: 32px;
+    height: 32px;
+    background-color: #f2e9d8;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #openMobileMenuBtn img {
+    width: 25px;
+    height: 25px;
+  }
+  #openMobileMenuBtn:hover {
+    background-color: #d4a373;
+  }
+  header .navbar {
+    width: 100%;
+    padding: 0 3%;
+  }
+  header .navbar .nav-links {
+    display: none;
+  }
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f2e9d8;
+  }
+  header .navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header .navbar a img {
+    width: 92px;
+    height: 28px;
+  }
+  .hodu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 718px;
+    background: #f2e9d8;
+    padding: 4% 10% 0 10%;
+    overflow: hidden;
+  }
+  .hodu .hodu-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .pc-span {
+    display: inline;
+  }
+  .mobile-span {
+    display: block;
+  }
+  .hodu .hodu-text h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30.05px;
+    text-align: center;
+    color: #000000;
+  }
+  .hodu .hodu-text p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.53px;
+    text-align: center;
+    margin: 30px 0;
+  }
+  .hodu .hodu-text .download-btn {
+    height: 40px;
+    width: 140px;
+    border-radius: 40px;
+  }
+  .hodu .hodu-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+  .hodu .hodu-img img {
+    width: 197px;
+    height: 120%;
+    object-fit: contain;
+  }
+
+  .scroll-top-btn {
+    display: none;
+  }
+  #myDialog {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    border: none;
+    background-image: url(./img/modal-bg-img.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 20px 0px #000000 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #myDialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #myDialog img {
+    width: 60px;
+    height: 62px;
+    margin: 40px 0 24px 0;
+  }
+  #myDialog p {
+    font-weight: 700;
+    height: 30px;
+    font-size: 24px;
+    line-height: 30.05x;
+    text-align: center;
+    color: #d97652;
+    margin-bottom: 10px;
+  }
+  #myDialog .p2 {
+    width: 199px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 17.53px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 28px;
+  }
+  #myDialog button {
+    width: 163px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 17.53px;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 40px;
+    padding: 12px 18px 12px 18px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 366px) {
+  .hodu .hodu-text h2 {
+    font-size: 20px;
+  }
+  .hodu .hodu-text p {
+    font-size: 12px;
+  }
+}
